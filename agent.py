@@ -67,7 +67,6 @@ Question: {input}
 
 prompt = PromptTemplate.from_template(prompt_template)
 
-# Ollama LLM (Local Model)
 llm = ChatOllama(
     model="llama3",
     temperature=0
@@ -93,6 +92,6 @@ test_questions = [
 ]
 
 for question in test_questions:
-    print(f"\n===== Testing: {question} =====")
+    print(f"\n Testing: {question} ")
     result = agent_executor.invoke({"input": question})
     print("Final Output:", result["output"])
